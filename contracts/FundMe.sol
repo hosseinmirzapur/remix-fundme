@@ -3,23 +3,25 @@ pragma solidity ^0.8.8;
 
 import "./PriceConverter.sol";
 
+error BalanceError();
+error NotOwner();
+error FailedTransaction();
+
 contract FundMe {
-    constructor() {
-        owner = msg.sender;
-    }
-
-    address public owner;
-
+    address public immutable i_owner;
     using PriceConverter for uint256;
-
-    uint256 public minUSD = 1;
-
+    uint256 public constant MINIMUM_USD = 1;
     address[] public funders;
-
     mapping(address => uint256) public addressToMoney;
 
+    constructor() {
+        i_owner = msg.sender;
+    }
+
     function fund() public payable {
-        require(msg.value.getConversionRate() >= minUSD, "Not enough funds!");
+        if (msg.value.getConversionRate() < MINIMUM_USD) {
+            revert BalanceError();
+        }
         funders.push(msg.sender);
         addressToMoney[msg.sender] = msg.value;
     }
@@ -45,22 +47,34 @@ contract FundMe {
          */
 
         // transfer - if anything goes wrong, thr transaction is reverted
-        payable(msg.sender).transfer(address(this).balance);
+        // payable(msg.sender).transfer(address(this).balance);
 
         // send - if anything goes wrong the contract returns boolean
-        bool result = payable(msg.sender).send(address(this).balance);
-        require(result, "Send failed!");
+        // bool result = payable(msg.sender).send(address(this).balance);
+        // require(result, "Send failed!");
 
         // call - it's way more advanced level of creating a transaction
         (bool success, ) = payable(msg.sender).call{
             value: address(this).balance
         }("");
-        require(success, "Call failed!");
+        if (!success) {
+            revert FailedTransaction();
+        }
     }
 
     modifier onlyOwner() {
-        require(msg.sender == owner, "Unauthorized Transaction");
-        _;
+        if (msg.sender != i_owner) {
+            revert NotOwner();
+        }
+        _; // This is like the next() function after the middleware
+    }
+
+    receive() external payable {
+        fund();
+    }
+
+    fallback() external payable {
+        fund();
     }
 
     // Also check: https://solidity-by-example.org/sending-ether
