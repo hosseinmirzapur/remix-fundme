@@ -1,0 +1,357 @@
+{
+    "contractName": "FundMe",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "fund",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"fund\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"d:/Projects/solidity/remix-fundme/contracts/FundMe.sol\":\"FundMe\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"d:/Projects/solidity/remix-fundme/contracts/FundMe.sol\":{\"keccak256\":\"0xfb5607e4e0adb882e3239fc22dd9682f25b0086016d877cc94d84d11cf78bce4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://66ba99a7f1353a1dfea59115e19aecae165ade25ff3097c49688294cee185f41\",\"dweb:/ipfs/QmdvUpT6J1NfPYrXYnXoN5PSM9bxFA3FaAKVRvQjbvkbv5\"]}},\"version\":1}",
+    "bytecode": "6080604052670de0b6b3a7640000600055633b9aca0060015534801561002457600080fd5b5060a9806100336000396000f3fe608060405260043610601c5760003560e01c8063b60d4288146021575b600080fd5b60276029565b005b600054341160715760405162461bcd60e51b81526020600482015260116024820152704e6f7420656e6f7567682066756e64732160781b604482015260640160405180910390fd5b56fea264697066735822122003a0c3a95afc52d9430335d06f12efd967079c54f25d8b9252bbae79331900e764736f6c63430008130033",
+    "deployedBytecode": "608060405260043610601c5760003560e01c8063b60d4288146021575b600080fd5b60276029565b005b600054341160715760405162461bcd60e51b81526020600482015260116024820152704e6f7420656e6f7567682066756e64732160781b604482015260640160405180910390fd5b56fea264697066735822122003a0c3a95afc52d9430335d06f12efd967079c54f25d8b9252bbae79331900e764736f6c63430008130033",
+    "sourceMap": "145:233:0:-:0;;;189:4;168:25;;222:3;200:25;;145:233;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "145:233:0:-:0;;;;;;;;;;;;;;;;;;;;;234:102;;;:::i;:::-;;;296:10;;284:9;:22;276:52;;;;-1:-1:-1;;;276:52:0;;216:2:1;276:52:0;;;198:21:1;255:2;235:18;;;228:30;-1:-1:-1;;;274:18:1;;;267:47;331:18;;276:52:0;;;;;;;;234:102::o",
+    "sourcePath": "d:/Projects/solidity/remix-fundme/contracts/FundMe.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.19+commit.7dd6d404"
+    },
+    "ast": {
+        "absolutePath": "d:/Projects/solidity/remix-fundme/contracts/FundMe.sol",
+        "exportedSymbols": {
+            "FundMe": [
+                24
+            ]
+        },
+        "id": 25,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".8"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "33:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "FundMe",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 24,
+                "linearizedBaseContracts": [
+                    24
+                ],
+                "name": "FundMe",
+                "nameLocation": "154:6:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 4,
+                        "mutability": "mutable",
+                        "name": "etherToWei",
+                        "nameLocation": "176:10:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 24,
+                        "src": "168:25:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "168:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "31653138",
+                            "id": 3,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "189:4:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                                "typeString": "int_const 1000000000000000000"
+                            },
+                            "value": "1e18"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "constant": false,
+                        "id": 7,
+                        "mutability": "mutable",
+                        "name": "etherToGWei",
+                        "nameLocation": "208:11:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 24,
+                        "src": "200:25:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 5,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "200:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "316539",
+                            "id": 6,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "222:3:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1000000000_by_1",
+                                "typeString": "int_const 1000000000"
+                            },
+                            "value": "1e9"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 18,
+                            "nodeType": "Block",
+                            "src": "265:71:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 14,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "id": 11,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "284:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 12,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberLocation": "288:5:0",
+                                                    "memberName": "value",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "284:9:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": ">",
+                                                "rightExpression": {
+                                                    "id": 13,
+                                                    "name": "etherToWei",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4,
+                                                    "src": "296:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "284:22:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            {
+                                                "hexValue": "4e6f7420656e6f7567682066756e647321",
+                                                "id": 15,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "308:19:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_a531843416d86fba93b800a44804953a0da265aecb2cfb6c4758e5242e81e2bd",
+                                                    "typeString": "literal_string \"Not enough funds!\""
+                                                },
+                                                "value": "Not enough funds!"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_a531843416d86fba93b800a44804953a0da265aecb2cfb6c4758e5242e81e2bd",
+                                                    "typeString": "literal_string \"Not enough funds!\""
+                                                }
+                                            ],
+                                            "id": 10,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "276:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (bool,string memory) pure"
+                                            }
+                                        },
+                                        "id": 16,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "276:52:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 17,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "276:52:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "b60d4288",
+                        "id": 19,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "fund",
+                        "nameLocation": "243:4:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 8,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "247:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 9,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "265:0:0"
+                        },
+                        "scope": 24,
+                        "src": "234:102:0",
+                        "stateMutability": "payable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 22,
+                            "nodeType": "Block",
+                            "src": "373:2:0",
+                            "statements": []
+                        },
+                        "id": 23,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "withdraw",
+                        "nameLocation": "353:8:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 20,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "361:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 21,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "373:0:0"
+                        },
+                        "scope": 24,
+                        "src": "344:31:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "internal"
+                    }
+                ],
+                "scope": 25,
+                "src": "145:233:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "33:347:0"
+    },
+    "functionHashes": {
+        "fund()": "b60d4288"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "33800",
+            "executionCost": "44299",
+            "totalCost": "78099"
+        },
+        "external": {
+            "fund()": "2321"
+        },
+        "internal": {
+            "withdraw()": "infinite"
+        }
+    }
+}
