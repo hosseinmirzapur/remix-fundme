@@ -24,7 +24,7 @@ contract FundMe {
         addressToMoney[msg.sender] = msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public onlyOwner {
         for (
             uint256 funderIndex = 0;
             funderIndex < funders.length;
@@ -57,5 +57,11 @@ contract FundMe {
         }("");
         require(success, "Call failed!");
     }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Unauthorized Transaction");
+        _;
+    }
+
     // Also check: https://solidity-by-example.org/sending-ether
 }
