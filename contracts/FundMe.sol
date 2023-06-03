@@ -4,6 +4,12 @@ pragma solidity ^0.8.8;
 import "./PriceConverter.sol";
 
 contract FundMe {
+    constructor() {
+        owner = msg.sender;
+    }
+
+    address public owner;
+
     using PriceConverter for uint256;
 
     uint256 public minUSD = 1;
